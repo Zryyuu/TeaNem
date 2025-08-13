@@ -64,8 +64,6 @@ ul {
 
 .btn-primary:hover {
     background: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
 }
 
 .btn-secondary {
@@ -76,8 +74,6 @@ ul {
 
 .btn-secondary:hover {
     background: var(--primary-extra-light);
-    transform: translateY(-2px);
-    box-shadow: var(--shadow);
 }
 
 .btn-nav {
@@ -106,16 +102,6 @@ h2 {
     padding-bottom: 15px;
 }
 
-.mobile-menu-toggle {
-    display: none;
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 10px;
-}
-
 nav {
     position: fixed;
     top: 0;
@@ -123,10 +109,8 @@ nav {
     z-index: 1000;
     background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     padding: 10px;
     border-bottom: 1px solid rgba(255, 140, 0, 0.2);
-    transition: var(--transition);
 }
 
 nav .container {
@@ -137,7 +121,6 @@ nav .container {
 
 .logo-container {
     display: flex;
-    align-items: center;
     gap: 10px;
 }
 
@@ -224,27 +207,10 @@ nav .container {
     height: auto;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transition: var(--transition);
-}
-
-.hero-image img:hover {
-    transform: scale(1.05);
 }
 
 .hero-text {
     text-align: left;
-    animation: fadeInUp 1s ease-out;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .hero-text h1 {
@@ -277,25 +243,13 @@ nav .container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    animation: fadeInUp 1s ease-out 0.3s both;
     justify-content: left;
-}
-
-.cta-buttons .btn {
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-.cta-buttons .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 .cta-buttons-bawah {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    animation: fadeInUp 1s ease-out 0.3s both;
     justify-content: center;
 }
 
@@ -379,12 +333,6 @@ nav .container {
     border-radius: 15px;
     padding: 30px;
     box-shadow: var(--shadow);
-    transition: var(--transition);
-}
-
-.timeline-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .timeline-time {
@@ -471,7 +419,6 @@ nav .container {
     display: flex;
     height: 500px;
     transition: transform 0.5s ease;
-    will-change: transform;
 }
 
 .gallery-item {
@@ -486,17 +433,6 @@ nav .container {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.gallery-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    font-size: 1.2rem;
 }
 
 .gallery-overlay {
@@ -540,7 +476,6 @@ nav .container {
 .gallery-arrows:hover {
     background: var(--primary-color);
     color: white;
-    transform: translateY(-50%) scale(1.1);
 }
 
 .gallery-prev-btn {
@@ -589,7 +524,7 @@ nav .container {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80px;
+    width: 500px;
     height: 4px;
     background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
     border-radius: 2px;
@@ -619,7 +554,6 @@ nav .container {
 }
 
 .sponsor-item:hover {
-    transform: translateY(-5px);
     border-color: var(--primary-color);
     box-shadow: var(--shadow);
 }
@@ -632,45 +566,11 @@ nav .container {
     transition: var(--transition);
 }
 
-.sponsor-item:hover img {
-    transform: scale(1.1);
-}
-
 .sponsor-info h4 {
     font-size: 1rem;
     color: var(--dark-color);
     margin-bottom: 5px;
     font-weight: 600;
-}
-
-.sponsor-cta {
-    background: var(--primary-extra-light);
-    border: 1px solid var(--primary-color);
-    border-radius: 15px;
-    padding: 30px;
-    text-align: center;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.sponsor-cta h3 {
-    font-size: 1.5rem;
-    color: var(--dark-color);
-    margin-bottom: 10px;
-    font-weight: 600;
-}
-
-.sponsor-cta p {
-    font-size: 1rem;
-    color: var(--gray);
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-.sponsor-cta .btn {
-    font-size: 1rem;
-    padding: 12px 25px;
-    border-radius: 20px;
 }
 
 .cta-section {
@@ -716,165 +616,665 @@ footer {
     text-align: center;
 }
 
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 2% auto;
+    padding: 0;
+    border-radius: 15px;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--gray);
+    cursor: pointer;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.close-btn:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+.modal-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    color: var(--white);
+    padding: 30px 40px 25px;
+    border-radius: 15px 15px 0 0;
+    text-align: center;
+}
+
+.modal-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Ticket Options */
+.ticket-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.ticket-card {
+    background: var(--white);
+    border: 2px solid var(--light-gray);
+    border-radius: 15px;
+    padding: 25px;
+    position: relative;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.ticket-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.ticket-card.popular {
+    border-color: var(--primary-color);
+    background: linear-gradient(135deg, var(--primary-extra-light) 0%, var(--white) 100%);
+}
+
+.ticket-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.ticket-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ticket-header h3 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.ticket-benefits {
+    margin-bottom: 25px;
+}
+
+.ticket-benefits p {
+    margin-bottom: 8px;
+    padding-left: 5px;
+    font-size: 0.95rem;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.quantity-control button {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.quantity-control button:hover {
+    background: var(--primary-dark);
+}
+
+.quantity-control span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-width: 30px;
+    text-align: center;
+}
+
+.ticket-summary, .registration-summary {
+    background: var(--light-color);
+    padding: 20px 30px;
+    margin: 0 30px 30px;
+    border-radius: 10px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.summary-row.total {
+    border-top: 2px solid var(--primary-color);
+    padding-top: 15px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+/* Competition Options */
+.competition-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 30px;
+}
+
+.competition-card {
+    background: var(--white);
+    border: 2px solid var(--light-gray);
+    border-radius: 15px;
+    padding: 25px;
+    position: relative;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.competition-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
+}
+
+.competition-card.selected {
+    border-color: var(--primary-color);
+    background: var(--primary-extra-light);
+}
+
+.comp-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.comp-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.comp-header h3 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.comp-price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.comp-details {
+    margin-bottom: 20px;
+}
+
+.comp-details p {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.comp-select {
+    text-align: center;
+}
+
+.comp-select input[type="checkbox"] {
+    margin-right: 8px;
+    transform: scale(1.2);
+}
+
+/* Forms */
+.ticket-form, .registration-form {
+    padding: 0 30px 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--light-gray);
+    border-radius: 8px;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+.payment-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.payment-option {
+    position: relative;
+}
+
+.payment-option input[type="radio"] {
+    display: none;
+}
+
+.payment-option label {
+    display: block;
+    padding: 15px;
+    border: 2px solid var(--light-gray);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    background: var(--white);
+    text-align: center;
+    font-weight: 600;
+}
+
+.payment-option input[type="radio"]:checked + label {
+    border-color: var(--primary-color);
+    background: var(--primary-extra-light);
+    color: var(--primary-color);
+}
+
+.terms-agreement {
+    margin-bottom: 30px;
+}
+
+.terms-agreement input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+.terms-agreement label {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Payment Modal */
+.payment-modal {
+    max-width: 700px;
+}
+
+.payment-content {
+    padding: 30px;
+}
+
+.payment-summary-box {
+    background: var(--primary-extra-light);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.payment-summary-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.total-payment {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 2px solid var(--primary-color);
+}
+
+.payment-section {
+    margin-bottom: 30px;
+}
+
+.payment-section h3 {
+    color: var(--dark-color);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.bank-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.bank-option {
+    background: var(--white);
+    border: 2px solid var(--light-gray);
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.bank-option:hover {
+    border-color: var(--primary-color);
+    background: var(--primary-extra-light);
+}
+
+.bank-option.selected {
+    border-color: var(--primary-color);
+    background: var(--primary-extra-light);
+}
+
+.bank-info h4 {
+    color: var(--dark-color);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.bank-info p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin: 2px 0;
+}
+
+.qris-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.qris-code {
+    background: var(--light-color);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.qris-code img {
+    width: 200px;
+    height: 200px;
+    border: 3px solid var(--primary-color);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.payment-instructions {
+    background: var(--light-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.payment-instructions h4 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.payment-instructions ol {
+    list-style: decimal;
+    padding-left: 20px;
+}
+
+.payment-instructions li {
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.payment-actions {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.payment-actions .btn {
+    margin: 0 10px;
+}
+
+/* Invoice and Ticket Print Styles */
+.invoice-modal, .ticket-print-modal {
+    max-width: 600px;
+}
+
+.invoice-content, .ticket-content {
+    padding: 40px;
+    text-align: center;
+}
+
+.invoice-header, .ticket-header {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.invoice-header h2, .ticket-header h2 {
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.invoice-header h3, .ticket-header h3 {
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.invoice-details, .ticket-details {
+    background: var(--light-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.ticket-qr {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.ticket-qr img {
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+.ticket-footer {
+    border-top: 2px solid var(--primary-color);
+    padding-top: 20px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.invoice-actions, .ticket-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.burger.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    .mobile-menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.95);
-        backdrop-filter: blur(10px);
-        flex-direction: column;
-        padding: 20px 0;
-        transform: translateY(-100%);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-    }
-
-    .nav-links.active {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .nav-links li {
-        width: 100%;
-        text-align: center;
-        margin: 5px 0;
-    }
-
-    .nav-links li a {
-        display: block;
-        padding: 15px 20px;
-        width: 100%;
-    }
-
     .hero-layout {
         grid-template-columns: 1fr;
         gap: 30px;
         text-align: center;
     }
-
-    .hero-text {
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .subtitle {
-        font-size: 1.2rem;
-    }
-
-    .cta-buttons {
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-
+    
     .about-content {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-
+    
     .timeline-item {
         flex-direction: column;
     }
-
+    
     .timeline-time {
         margin-right: 0;
         margin-bottom: 20px;
         flex: none;
-        width: 100%;
     }
-
-    .gallery-wrapper {
-        height: 400px;
-    }
-
-    .gallery-tabs {
-        gap: 10px;
-    }
-
-    .tab-btn {
-        padding: 8px 16px;
-        font-size: 14px;
-    }
-
-    .sponsor-grid {
+    
+    .footer-grid {
         flex-direction: column;
-        gap: 20px;
+        padding-left: 0;
+        gap: 30px;
+        text-align: left;
+    }
+    
+    .burger {
+        display: flex;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
+        padding-top: 50px;
+        transition: left 0.3s ease;
     }
-
-    .sponsor-item {
-        min-width: 140px;
-        max-width: 200px;
+    
+    .nav-links.active {
+        left: 0;
     }
-
-    .sponsor-cta {
-        padding: 25px;
-        margin: 0 20px;
+    
+    .nav-links li {
+        margin: 15px 0;
     }
-
-    .sponsor-cta h3 {
-        font-size: 1.3rem;
+    
+    .nav-links .btn-nav {
+        margin: 10px 0;
     }
-}
-
-@media (max-width: 576px) {
-    h1 {
-        font-size: 2rem;
+    
+    .modal-content {
+        margin: 5% auto;
+        max-width: 95%;
     }
-
-    section {
-        padding: 50px 0;
+    
+    .form-row {
+        grid-template-columns: 1fr;
     }
-
-    .gallery-wrapper {
-        height: 300px;
+    
+    .bank-options {
+        grid-template-columns: 1fr;
     }
-
-    .countdown-item {
-        min-width: 80px;
-        padding: 15px;
+    
+    .ticket-options,
+    .competition-options {
+        grid-template-columns: 1fr;
     }
-
-    .countdown-item span {
-        font-size: 1.5rem;
-    }
-
-    .sponsor {
-        padding: 60px 0;
-    }
-
-    .sponsor-grid {
-        gap: 15px;
-    }
-
-    .sponsor-item {
-        min-width: 120px;
-        padding: 15px;
-    }
-
-    .sponsor-item img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .sponsor-info h4 {
-        font-size: 0.9rem;
-    }
-
-    .sponsor-category {
-        font-size: 0.7rem;
-        padding: 2px 8px;
+    
+    .payment-methods {
+        grid-template-columns: 1fr;
     }
 }
