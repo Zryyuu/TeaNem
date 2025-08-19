@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pentas Seni 2025 - SMKN 6 Jember</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="hero-header">
+        <nav id="navbar">
+            <div class="container">
+                <div class="logo-container">
+                    <img src="../assets/logo.svg" alt="Logo TeaNem">
+                    <div class="logo">Tea<span>Nem</span></div>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#event" class="nav-link">Event</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#sponsor" class="nav-link">Sponsor</a></li>
+                    <li><a href="#" class="btn btn-nav btn-primary" onclick="openRegistrationModal()">Register</a></li>
+                    <li><a href="#" class="btn btn-nav btn-secondary" onclick="openTicketModal()">Buy Ticket</a></li>
+                </ul>
+                <div class="burger" id="burgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="hero-content" id="home">
+            <div class="hero-layout">
+                <div class="hero-image">
+                    <img src="../image/3004-LANGGAM-TARI.jpg" alt="Penari Tradisional">
+                </div>
+                <div class="hero-text">
+                    <h1>Teater Enem</h1>
+                    <p class="subtitle">Pentas Seni Tahunan SMKN 6 Jember</p>
+                    <p class="date">13 Agustus 2025 | Gedung Aula SMKN 6 Jember</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary" onclick="openRegistrationModal()">Daftar sebagai Peserta</a>
+                        <a href="#" class="btn btn-secondary" onclick="openTicketModal()">Beli Tiket Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Tentang Teater Enem</h2>
+                    <p>Teater Enem adalah pentas seni tahunan yang diselenggarakan oleh SMKN 6 Jember sebagai wadah bagi siswa untuk mengekspresikan kreativitas dan bakat seni mereka.</p>
+                    <p>Acara ini menampilkan berbagai pertunjukan mulai dari teater modern, tari tradisional, hingga musik yang memukau.</p>
+                    <p>Bergabunglah dengan kami dalam merayakan seni dan budaya Indonesia melalui panggung SMKN 6 Jember.</p>
+                </div>
+                <div class="countdown-container">
+                    <h3>Acara Akan Dimulai Dalam</h3>
+                    <div class="countdown">
+                        <div class="countdown-item">
+                            <span id="days">00</span>
+                            <small>Hari</small>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="hours">00</span>
+                            <small>Jam</small>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="minutes">00</span>
+                            <small>Menit</small>
+                        </div>
+                        <div class="countdown-item">
+                            <span id="seconds">00</span>
+                            <small>Detik</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="event" class="event-section">
+        <div class="container">
+            <h2>Jadwal Acara</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: var(--gray);">
+                Timeline lengkap acara Teater Enem 2025
+            </p>
+            <div class="event-timeline">
+                <div class="timeline-item event-highlight">
+                    <div class="timeline-time">
+                        <div class="time-display">07:40</div>
+                        <div class="time-separator">-</div>
+                        <div class="time-display">10:30</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Pentas Seni Utama</h3>
+                        <p>Pertunjukan berbagai karya seni dari siswa-siswi SMKN 6 Jember:</p>
+                        <p>- Teater Modern dan  pertunjukan Wayang kulit</p>
+                        <p>- Tari Tradisional dari berbagai daerah di Indonesia</p>
+                        <p>- Pertunjukan Musik dan Band siswa</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-time">
+                        <div class="time-display">10:30</div>
+                        <div class="time-separator">-</div>
+                        <div class="time-display">11:00</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Istirahat & Networking</h3>
+                        <p>Waktu istirahat untuk peserta dan penonton. Kesempatan untuk berinteraksi dengan para seniman muda dan menikmati refreshment yang telah disediakan.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item event-highlight">
+                    <div class="timeline-time">
+                        <div class="time-display">11:00</div>
+                        <div class="time-separator">-</div>
+                        <div class="time-display">15:00</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Kompetisi Seni</h3>
+                        <p>Berbagai lomba seni yang mempertandingkan kreativitas dan bakat siswa:</p>
+                        <p>• Lomba Monolog - Menampilkan kemampuan individual</p>
+                        <p>• Lomba Tari Kreasi - Kompetisi tari dengan tema bebas</p>
+                        <p>• Lomba Paduan Suara - Kompetisi paduan suara dengan tema bebas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2>Galeri Teater Enem</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: var(--gray);">
+                Video highlight dan dokumentasi Teater Enem
+            </p>
+            
+            <div class="gallery-tabs">
+                <button class="tab-btn active" onclick="switchGalleryTab('highlight')">Highlight</button>
+                <button class="tab-btn" onclick="switchGalleryTab('galeri')">Galeri</button>
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-wrapper" id="galleryWrapper">
+                    <div class="gallery-item" data-category="highlight">
+                        <video autoplay muted loop>
+                            <source src="../assets/https___youtu.be_lGZ6s-Myzzw_si=uLpnVCWfGqV_Qy3X.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="gallery-overlay">
+                            <h3>Teater Modern Highlight</h3>
+                            <p>Cuplikan terbaik dari pertunjukan teater modern yang menginspirasi</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="highlight">
+                        <video autoplay muted loop>
+                            <source src="../assets/https___youtu.be_oWXvkgLnGxE_si=B43rYtE9Z484i8T0c (1).mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="gallery-overlay">
+                            <h3>Tari Tradisional Highlight</h3>
+                            <p>Momen spektakuler dari kolaborasi tari daerah Indonesia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="highlight">
+                        <video autoplay muted loop>
+                            <source src="../assets/https___youtu.be_oWXvkgLnGxE_si=B43rYtE9Z484i8T0c.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="gallery-overlay">
+                            <h3>Band Performance Highlight</h3>
+                            <p>Penampilan energik dari band-band siswa terbaik</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="highlight">
+                        <video autoplay muted loop>
+                            <source src="../assets/https___youtu.be_u6eMjzb8XWc_si=qKaT9pLjwwhsLmYq.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="gallery-overlay">
+                            <h3>Competition Highlight</h3>
+                            <p>Momen-momen terbaik dari berbagai kompetisi seni</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="galeri" style="display: none;">
+                        <img src="../image/https___pin.it_2pYUVcoZq.jpeg" alt="Behind The Scenes">
+                        <div class="gallery-overlay">
+                            <h3>Behind The Scenes</h3>
+                            <p>Dokumentasi proses persiapan dan latihan para siswa</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="galeri" style="display: none;">
+                        <img src="../image/https___pin.it_3R1U0xSje.jpg" alt="Pameran Seni Rupa">
+                        <div class="gallery-overlay">
+                            <h3>Pameran Seni Rupa</h3>
+                            <p>Koleksi karya seni rupa terbaik siswa SMKN 6 Jember</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="galeri" style="display: none;">
+                        <img src="../image/https___pin.it_4gn8C9nTI.jpg" alt="Workshop & Training">
+                        <div class="gallery-overlay">
+                            <h3>Workshop & Training</h3>
+                            <p>Dokumentasi kegiatan workshop dan pelatihan seni siswa</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item" data-category="galeri" style="display: none;">
+                        <img src="../image/https___pin.it_4Vpb7zCNw.jpeg" alt="Alumni & Guest Stars">
+                        <div class="gallery-overlay">
+                            <h3>Alumni & Guest Stars</h3>
+                            <p>Dokumentasi kehadiran alumni dan tamu istimewa di Teater Enem</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="gallery-arrows gallery-prev-btn" onclick="changeGallery(-1)">&lt;</button>
+                <button class="gallery-arrows gallery-next-btn" onclick="changeGallery(1)">&gt;</button>
+                <div class="gallery-nav" id="galleryDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sponsor" class="sponsor">
+        <div class="container">
+            <h2 class="section-title">Didukung Oleh</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: var(--gray);">
+                Partner dan sponsor yang mendukung Teater Enem 2025
+            </p>
+            
+            <div class="sponsor-grid">
+                <div class="sponsor-item">
+                    <img src="../image/Logo EPIM.png" alt="Logo EPIM">
+                    <div class="sponsor-info">
+                        <h4>EPIM</h4>
+                    </div>
+                </div>
+                
+                <div class="sponsor-item">
+                    <img src="../image/Logo JTI.png" alt="Logo JTI">
+                    <div class="sponsor-info">
+                        <h4>JTI Polinema</h4>
+                    </div>
+                </div>
+                
+                <div class="sponsor-item">
+                    <img src="../image/Logo Polije.png" alt="Logo Polije">
+                    <div class="sponsor-info">
+                        <h4>Politeknik Jember</h4>
+                    </div>
+                </div>
+                
+                <div class="sponsor-item">
+                    <img src="../image/smk6.png" alt="Logo SMK6">
+                    <div class="sponsor-info">
+                        <h4>SMKN 6 Jember</h4>
+                    </div>
+                </div>
+                
+                <div class="sponsor-item">
+                    <img src="../image/rpl.png" alt="Logo RPL">
+                    <div class="sponsor-info">
+                        <h4>RPL SMKN 6 Jember</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2>Siap Menjadi Bagian dari Teater Enem?</h2>
+            <p style="padding-bottom: 20px;">Jangan lewatkan momen spektakuler ini! Baik sebagai peserta yang menunjukkan bakat maupun penonton yang mendukung, kehadiran Anda sangat berarti.</p>
+            <div class="cta-buttons-bawah">
+                <a href="#" class="btn btn-primary" onclick="openRegistrationModal()">Daftar sebagai Peserta</a>
+                <a href="#" class="btn btn-secondary" onclick="openTicketModal()">Beli Tiket Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="ticketModal" class="modal">
+        <div class="modal-content ticket-modal">
+            <span class="close-btn" onclick="closeTicketModal()">&times;</span>
+            <div class="modal-header">
+                <h2>Beli Tiket Teater Enem 2025</h2>
+                <p>Pilih jenis tiket dan jumlah yang diinginkan</p>
+            </div>
+            
+            <div class="ticket-options">
+                <div class="ticket-card" data-type="reguler" data-price="25000">
+                    <div class="ticket-header">
+                        <h3>Tiket Reguler</h3>
+                        <div class="price">Rp 25.000</div>
+                    </div>
+                    <div class="ticket-benefits">
+                        <p>- Akses ke semua pertunjukan</p>
+                        <p>- Tempat duduk standar</p>
+                        <p>- Booklet program acara</p>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" onclick="changeQuantity('reguler', -1)">-</button>
+                        <span id="qty-reguler">0</span>
+                        <button type="button" onclick="changeQuantity('reguler', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="ticket-card popular" data-type="vip" data-price="50000">
+                    <div class="ticket-badge">POPULER</div>
+                    <div class="ticket-header">
+                        <h3>Tiket VIP</h3>
+                        <div class="price">Rp 50.000</div>
+                    </div>
+                    <div class="ticket-benefits">
+                        <p>- Akses ke semua pertunjukan</p>
+                        <p>- Tempat duduk terdepan</p>
+                        <p>- Booklet program acara</p>
+                        <p>- Welcome drink & snack</p>
+                        <p>- Meet & greet dengan peserta</p>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" onclick="changeQuantity('vip', -1)">-</button>
+                        <span id="qty-vip">0</span>
+                        <button type="button" onclick="changeQuantity('vip', 1)">+</button>
+                    </div>
+                </div>
+                
+                <div class="ticket-card" data-type="premium" data-price="75000">
+                    <div class="ticket-header">
+                        <h3>Tiket Premium</h3>
+                        <div class="price">Rp 75.000</div>
+                    </div>
+                    <div class="ticket-benefits">
+                        <p>- Semua fasilitas VIP</p>
+                        <p>- Dokumentasi foto eksklusif</p>
+                        <p>- Sertifikat apresiasi</p>
+                        <p>- Goodie bag eksklusif</p>
+                        <p>- Reserved parking</p>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" onclick="changeQuantity('premium', -1)">-</button>
+                        <span id="qty-premium">0</span>
+                        <button type="button" onclick="changeQuantity('premium', 1)">+</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ticket-summary">
+                <div class="summary-row">
+                    <span>Total Tiket:</span>
+                    <span id="totalTickets">0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total Harga:</span>
+                    <span id="totalPrice">Rp 0</span>
+                </div>
+            </div>
+            
+            <form id="ticketForm" class="ticket-form">
+                <h3>Data Pembeli</h3>
+                <div class="form-group">
+                    <label for="buyerName">Nama Lengkap *</label>
+                    <input type="text" id="buyerName" name="buyerName" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="buyerEmail">Email *</label>
+                        <input type="email" id="buyerEmail" name="buyerEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="buyerPhone">No. Telepon *</label>
+                        <input type="tel" id="buyerPhone" name="buyerPhone" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="buyerAddress">Alamat</label>
+                    <textarea id="buyerAddress" name="buyerAddress" rows="3"></textarea>
+                </div>
+                
+                <h3>Metode Pembayaran</h3>
+                <div class="payment-methods">
+                    <div class="payment-option">
+                        <input type="radio" id="bank" name="payment" value="bank" checked>
+                        <label for="bank">Transfer Bank</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="qris" name="payment" value="qris">
+                        <label for="qris">QRIS</label>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-purchase">Beli Tiket Sekarang</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="registrationModal" class="modal">
+        <div class="modal-content registration-modal">
+            <span class="close-btn" onclick="closeRegistrationModal()">&times;</span>
+            <div class="modal-header">
+                <h2>Daftar Kompetisi Teater Enem 2025</h2>
+                <p>Tunjukkan bakat terbaikmu di panggung SMKN 6 Jember</p>
+            </div>
+            
+            <div class="competition-options">
+                <div class="competition-card" data-type="monolog">
+                    <div class="comp-header">
+                        <h3>Lomba Monolog</h3>
+                        <div class="comp-price">Rp 15.000</div>
+                    </div>
+                    <div class="comp-details">
+                        <p><strong>Durasi:</strong> Maksimal 5 menit</p>
+                        <p><strong>Tema:</strong> Bebas</p>
+                        <p><strong>Kategori:</strong> Individual</p>
+                        <p><strong>Hadiah:</strong></p>
+                        <p><strong>Juara 1:</strong> Rp 500.000</p>
+                        <p><strong>Juara 2:</strong> Rp 350.000</p>
+                        <p><strong>Juara 3:</strong> Rp 200.000</p>
+                    </div>
+                    <div class="comp-select">
+                        <input type="checkbox" id="comp-monolog" name="competitions" value="monolog">
+                        <label for="comp-monolog">Pilih Lomba Ini</label>
+                    </div>
+                </div>
+                
+                <div class="competition-card popular" data-type="tari">
+                    <div class="comp-badge">POPULER</div>
+                    <div class="comp-header">
+                        <h3>Lomba Tari Kreasi</h3>
+                        <div class="comp-price">Rp 25.000</div>
+                    </div>
+                    <div class="comp-details">
+                        <p><strong>Durasi:</strong> 3-7 menit</p>
+                        <p><strong>Tema:</strong> Tradisional Modern</p>
+                        <p><strong>Kategori:</strong> Grup (3-8 orang)</p>
+                        <p><strong>Hadiah:</strong></p>
+                        <p><strong>Juara 1:</strong> Rp 1.000.000</p>
+                        <p><strong>Juara 2:</strong> Rp 800.000</p>
+                        <p><strong>Juara 3:</strong> Rp 500.000</p>
+                    </div>
+                    <div class="comp-select">
+                        <input type="checkbox" id="comp-tari" name="competitions" value="tari">
+                        <label for="comp-tari">Pilih Lomba Ini</label>
+                    </div>
+                </div>
+                
+                <div class="competition-card" data-type="paduan-suara">
+                    <div class="comp-header">
+                        <h3>Lomba Paduan Suara</h3>
+                        <div class="comp-price">Rp 30.000</div>
+                    </div>
+                    <div class="comp-details">
+                        <p><strong>Durasi:</strong> 4-6 menit</p>
+                        <p><strong>Tema:</strong> Lagu Daerah/Nasional</p>
+                        <p><strong>Kategori:</strong> Grup (6-15 orang)</p>
+                        <p><strong>Hadiah:</strong></p>
+                        <p><strong>Juara 1:</strong> Rp 1.250.000</p>
+                        <p><strong>Juara 2:</strong> Rp 900.000</p>
+                        <p><strong>Juara 3:</strong> Rp 750.000</p>
+                    </div>
+                    <div class="comp-select">
+                        <input type="checkbox" id="comp-paduan" name="competitions" value="paduan-suara">
+                        <label for="comp-paduan">Pilih Lomba Ini</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="registration-summary">
+                <div class="summary-row">
+                    <span>Lomba Dipilih:</span>
+                    <span id="selectedComps">0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total Biaya:</span>
+                    <span id="totalRegPrice">Rp 0</span>
+                </div>
+            </div>
+            
+            <form id="registrationForm" class="registration-form">
+                <h3>Data Peserta</h3>
+                <div class="form-group">
+                    <label for="participantName">Nama Lengkap/Grup *</label>
+                    <input type="text" id="participantName" name="participantName" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="participantEmail">Email *</label>
+                        <input type="email" id="participantEmail" name="participantEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="participantPhone">No. Telepon *</label>
+                        <input type="tel" id="participantPhone" name="participantPhone" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="school">Asal Sekolah *</label>
+                        <input type="text" id="school" name="school" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Usia *</label>
+                        <input type="number" id="age" name="age" min="13" max="25" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="motivation">Motivasi Mengikuti Lomba *</label>
+                    <textarea id="motivation" name="motivation" rows="3" required placeholder="Mengapa ingin mengikuti lomba ini?"></textarea>
+                </div>
+                
+                <h3>Metode Pembayaran</h3>
+                <div class="payment-methods">
+                    <div class="payment-option">
+                        <input type="radio" id="regBank" name="regPayment" value="bank" checked>
+                        <label for="regBank">Transfer Bank</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="regQris" name="regPayment" value="qris">
+                        <label for="regQris">QRIS</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-register">Daftar Sekarang</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="paymentModal" class="modal">
+        <div class="modal-content payment-modal">
+            <span class="close-btn" onclick="closePaymentModal()">&times;</span>
+            <div class="modal-header">
+                <h2>Pembayaran</h2>
+                <p id="paymentDescription">Pilih metode pembayaran dan selesaikan transaksi</p>
+            </div>
+            
+            <div class="payment-content">
+                <div class="payment-summary-box">
+                    <h3>Ringkasan Pembayaran</h3>
+                    <div id="paymentSummaryDetails"></div>
+                    <div class="total-payment">
+                        <span>Total Pembayaran:</span>
+                        <span id="finalTotalPrice">Rp 0</span>
+                    </div>
+                </div>
+                
+                <div id="bankPayment" class="payment-section">
+                    <h3>Transfer Bank</h3>
+                    <div class="bank-options">
+                        <div class="bank-option" onclick="selectBank('bca')">
+                            <div class="bank-info">
+                                <h4>Bank BCA</h4>
+                                <p>No. Rek: 1234567890</p>
+                                <p>a.n. Panitia Teater Enem</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bank-option" onclick="selectBank('bri')">
+                            <div class="bank-info">
+                                <h4>Bank BRI</h4>
+                                <p>No. Rek: 0987654321</p>
+                                <p>a.n. Panitia Teater Enem</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bank-option" onclick="selectBank('mandiri')">
+                            <div class="bank-info">
+                                <h4>Bank Mandiri</h4>
+                                <p>No. Rek: 1122334455</p>
+                                <p>a.n. Panitia Teater Enem</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bank-option" onclick="selectBank('bni')">
+                            <div class="bank-info">
+                                <h4>Bank BNI</h4>
+                                <p>No. Rek: 5544332211</p>
+                                <p>a.n. Panitia Teater Enem</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-instructions">
+                        <h4>Instruksi Pembayaran:</h4>
+                        <ol>
+                            <li>Transfer sesuai nominal yang tertera</li>
+                            <li>Konfirmasi pembayaran dengan mengklik tombol di bawah</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div id="qrisPayment" class="payment-section">
+                    <h3>Pembayaran QRIS</h3>
+                    <div class="qris-container">
+                        <div class="qris-code">
+                            <img src="../image/Tf_saya.jpg" alt="QR Code QRIS">
+                            <p>Scan dengan aplikasi mobile banking atau e-wallet</p>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-instructions">
+                        <h4>Instruksi Pembayaran:</h4>
+                        <ol>
+                            <li>Buka aplikasi mobile banking atau e-wallet</li>
+                            <li>Scan QR Code di atas</li>
+                            <li>Konfirmasi pembayaran sesuai nominal</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="payment-actions">
+                    <button class="btn btn-primary" onclick="confirmPayment()">Konfirmasi Pembayaran</button>
+                    <button class="btn btn-secondary" onclick="closePaymentModal()">Batal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="invoiceModal" class="modal">
+        <div class="modal-content invoice-modal">
+            <span class="close-btn" onclick="closeInvoiceModal()">&times;</span>
+            <div class="invoice-content">
+                <div class="invoice-header">
+                    <h2>INVOICE</h2>
+                    <h3>TEATER ENEM 2025</h3>
+                    <p>SMKN 6 Jember</p>
+                </div>
+                
+                <div class="invoice-details" id="invoiceDetails">
+                </div>
+                
+                <div class="invoice-actions">
+                    <button class="btn btn-primary" onclick="printInvoice()">Cetak Invoice</button>
+                    <button class="btn btn-secondary" onclick="closeInvoiceModal()">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ticketPrintModal" class="modal">
+        <div class="modal-content ticket-print-modal">
+            <span class="close-btn" onclick="closeTicketPrintModal()">&times;</span>
+            <div class="ticket-content">
+                <div class="ticket-header">
+                    <h2>TIKET TEATER ENEM 2025</h2>
+                    <p>SMKN 6 Jember</p>
+                </div>
+                
+                <div class="ticket-details" id="ticketDetails">
+                </div>
+                
+                <div class="ticket-qr">
+                    <img src="../image/TICKET 2.png" alt="Ticket QR Code">
+                </div>
+                
+                <div class="ticket-footer">
+                    <p>Tunjukkan tiket ini saat masuk acara</p>
+                    <p>13 Agustus 2025 | Gedung Aula SMKN 6 Jember</p>
+                </div>
+                
+                <div class="ticket-actions">
+                    <button class="btn btn-primary" onclick="printTicket()">Cetak Tiket</button>
+                    <button class="btn btn-secondary" onclick="closeTicketPrintModal()">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>Pentas Seni 2025</h3>
+                    <p>Teater Enem</p>
+                    <p>SMKN 6 Jember</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Link Cepat</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#event">Event</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#sponsor">Sponsor</a></li>
+                    </ul>
+                </div>
+                <div class="footer-action">
+                    <h3>Aksi</h3>
+                    <ul>
+                        <li><a href="#" onclick="openRegistrationModal()">Register</a></li>
+                        <li><a href="#" onclick="openTicketModal()">Buy Ticket</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Hubungi Kami</h3>
+                    <p>teater.enem@smkn6jember.sch.id</p>
+                    <p>(0336) 441347</p>
+                    <p>Jl. PB. Sudirman No. 114, Tanggul, Jember</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Teater Enem All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
